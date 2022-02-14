@@ -23,6 +23,12 @@ function createImagesMarkup(img) {
 
 function onImgClick(event) {
     event.preventDefault();
+
+    const isImageEl = event.target.classList.contains('gallery__image');
+    if (!isImageEl) {
+        return;
+    }
+
     let gallery = new SimpleLightbox('.gallery a');
     gallery.on('show.simplelightbox', function () {
         // captionSelector: "img";
