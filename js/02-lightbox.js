@@ -23,6 +23,10 @@ function createImagesMarkup(img) {
 
 function onImgClick(event) {
     event.preventDefault();
-
-var lightbox = new SimpleLightbox('.gallery a', { captionsData: "alt",  captionDelay: 250});
+    let gallery = new SimpleLightbox('.gallery a');
+    gallery.on('show.simplelightbox', function () {
+        // captionSelector: "img";
+        captionsData: "alt";
+        captionDelay: "250";
+});
 }
