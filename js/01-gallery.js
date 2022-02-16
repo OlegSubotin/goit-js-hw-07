@@ -48,8 +48,7 @@ function onImgContainerClick(event) {
     }
 
     let imgBigUrl = event.target.dataset.source;
-    img.Element(document.querySelector('img').setAttribute("src", "imgBigUrl"));
-
+    img.element().querySelector('img').setAttribute("src", imgBigUrl);
     img.show();
 
 }
@@ -57,13 +56,3 @@ function onImgContainerClick(event) {
 
 
 
-//     const imgBigUrl = event.target.dataset.source;
-//     const img = basicLightbox.create(`<img src=${imgBigUrl} width="800" height="600">`);
-//     img.show();
-
-//     window.addEventListener('keydown', onModalClose);
-//     function onModalClose (evt) { 
-//         if (evt.code === 'Escape' ) {
-//             img.close();
-//     }
-// };
